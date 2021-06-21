@@ -24,12 +24,12 @@ describe ('cartList tests', () => {
     }
 
     mockGetCart.mockResolvedValueOnce(fakeReturnData);
-    const { getByText } = render (<CartList />);
+    const renderedObject = render (<CartList />);
 
     expect(mockGetCart).toHaveBeenCalledTimes(1);
-    expect(mockGetCart).toHaveBeenCalledWith()
+    expect(mockGetCart).toHaveBeenCalledWith();
 
-    await waitFor(() => getByText(52));
+    await waitFor(() => renderedObject.getByText(52));
 
   });
 
