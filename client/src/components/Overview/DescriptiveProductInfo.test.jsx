@@ -6,7 +6,7 @@ import { productId, productInfo } from './OverviewSampleTestData.js';
 
 describe('descriptive product info tests', () => {
 
-  test('correctly renders the slogan', () => {
+  it('correctly renders the slogan', () => {
 
     const renderedObject = render (<DescriptiveProductInfo productId={productId} productInfo={productInfo} />);
 
@@ -15,7 +15,7 @@ describe('descriptive product info tests', () => {
 
   });
 
-  test('correctly renders the description', () => {
+  it('correctly renders the description', () => {
 
     const renderedObject = render (<DescriptiveProductInfo productId={productId} productInfo={productInfo} />);
 
@@ -24,7 +24,7 @@ describe('descriptive product info tests', () => {
 
   });
 
-  test('correctly changes the color of social media buttons', () => {
+  it('correctly changes the color of social media buttons', () => {
 
     const renderedObject = render (<DescriptiveProductInfo productId={productId} productInfo={productInfo} />);
 
