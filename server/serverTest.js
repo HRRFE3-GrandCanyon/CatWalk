@@ -15,12 +15,38 @@ describe('test api', function() {
         done();
       })
       .catch(err => done(err));
+
   });
 
-  it('post cart', function(done) {
+  it('should successfully post to cart and add 1 to quantity', function(done) {
+
+    var itemCountBefore;
+    var itemCountAfter;
+
+    request(app)
+      .get('/cart')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then(response => {
+        itemCountBefore = response.body[0].count;
+        return request(app)
+          .post('/cart')
+          .send({'sku_id': 599531})
+          .set('Accept', 'application/json')
+          .expect(200);
+      })
+      .then(() => {
+        return request(app)
+          .get('/cart')
+          .expect('Content-Type', /json/)
+          .expect(200);
+      })
+      .then((response) => {
+        itemCountAfter = response.body[0].count;
+        expect(itemCountAfter - itemCountBefore).to.equal(1);
+        done();
+      });
 
   });
 
 });
-
-
