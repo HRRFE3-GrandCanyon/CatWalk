@@ -1,23 +1,67 @@
-# FEC
-Front End Capstone - Grand Canyon
+# Trendz
 
-# STARTING THE APPLICATION
-Run the following commands:
-  1. "npm install"
-  2. "npm run start"
-  3. "npm run build"
+## Overview
 
-Follow the next step to add your Github Api Token.
+Deliver a fully functional web application that meets the specifications and requirements outlined in the business requirement document. Integrate the front end with the existing API for the product, and demonstrate the working application at the end of the project timeline.
 
-# GITHUB API TOKEN
-When cloning the repo, make sure to create a config.js file in the server folder. In here, copy and paste the following code:
+## Environment Variables
 
-module.exports = {
-  TOKEN: YOUR_TOKEN_HERE
-};
+To run this project, you will need to add the following environment variables to your .config file
 
-Update the token with your github API token, and make sure to put into .gitignore.
+`TOKEN`
 
-# BEFORE YOU PUSH
-Run the following command:
-  1. "npm run linter"
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Trendz-eCommerce/Trendz.git
+```
+
+Go to the project directory
+
+```bash
+  cd Trendz
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+Build the client
+
+```bash
+  npm run build
+```
+
+## Color Reference
+
+| Color           | Hex                                                              |
+| --------------- | ---------------------------------------------------------------- |
+| Main Color      | ![#74d174](https://via.placeholder.com/10/74d174?text=+) #74d174 |
+| Secondary Color | ![#3a3636](https://via.placeholder.com/10/3a3636?text=+) #3a3636 |
+
+## Screenshots
+
+![Imgur](https://i.imgur.com/ubX47if.png)
+
+![Imgur](https://i.imgur.com/xAzjDwz.png)
+
+![Imgur](https://i.imgur.com/8Ly4LU1.png)
+
+![Imgur](https://i.imgur.com/7m6K7vQ.png)
+
+## Authors
+
+- [@Neil Dudani](https://github.com/neildudani)
+- [@Katie Ladd](https://github.com/katieladd)
+- [@Alyssa Antonaccio](https://github.com/alyant34)
+- [@Scott Provence](https://github.com/scopro220)
